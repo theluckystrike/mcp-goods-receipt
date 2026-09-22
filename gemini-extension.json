@@ -1,0 +1,22 @@
+{
+  "name": "mcp-goods-receipt",
+  "version": "0.22.0",
+  "description": "MCP server for goods receipt notes against purchase orders: units received, damaged and short, with a discrepancy report. The receiving record for purchase orders: what arrived, against which line, in what quantity and condition.",
+  "settings": [
+    {
+      "name": "mcp.zovo.one token",
+      "description": "A free anonymous token from https://mcp.zovo.one/mcp/token, or your Pro key. One token is one data space, and it is refreshed for another 30 days on every write.",
+      "envVar": "ZOVO_MCP_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "goods-receipt": {
+      "httpUrl": "https://mcp.zovo.one/mcp/goods-receipt",
+      "headers": {
+        "Authorization": "Bearer ${ZOVO_MCP_TOKEN}"
+      },
+      "description": "The receiving record for purchase orders: what arrived, against which line, in what quantity and condition."
+    }
+  }
+}
