@@ -1,6 +1,6 @@
 // Mirror note: tests that need a signed Pro key are skipped here. The signing key
 // lives only in the monorepo (keys/license-private.pem); run them there.
-// Contract: what mcp-goods-receipt promises consumers — tool catalogue, output shape,
+// Contract: what mcp-goods-receipt promises consumers - tool catalogue, output shape,
 // licensing, and the exact strings other documents quote.
 import { test } from "node:test";
 import assert from "node:assert/strict";
