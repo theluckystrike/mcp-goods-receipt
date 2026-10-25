@@ -7,6 +7,7 @@ import { client, sandbox, cleanup, proKey } from "./_client.mjs";
 let c, box;
 
 beforeEach(async () => {
+  try { c?.close(); } catch {}
   box = sandbox();
   c = client({ dataHome: box.dataHome });
   await c.init();
